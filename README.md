@@ -1,10 +1,11 @@
 ###
 # build, tag and push to dockerhub
+```sh
 docker build . -t php7-fpm
 *note*: docker run -it php7-fpm sh
 docker tag php7-fpm robkel/php7-fpm
 docker push robkel/php7-fpm
-
+```
 ###
 # steps to create
 ```sh
