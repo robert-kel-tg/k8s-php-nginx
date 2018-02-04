@@ -16,7 +16,8 @@ kubectl create configmap nginx-config --from-file=k8s/configmap-files
 kubectl create -f ./k8s/my-nginx.yaml
 kubectl create -f ./k8s/nginx-svc.yaml
 minikube service my-nginx
-```
+
 # ssh into nginx container
-kubectl exec -it my-nginx-5d69b5ff7-9tzhh -c my-nginx bash
+kubectl exec -it [pod name] -c my-nginx bash
 kubectl exec -it php7-fpm-d58gn -c phpfpm sh
+```
