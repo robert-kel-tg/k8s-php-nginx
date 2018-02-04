@@ -1,5 +1,5 @@
 ###
-# build, tag and push to dockerhub
+# Build, tag and push to dockerhub
 ```sh
 docker build . -t php7-fpm
 *note*: docker run -it php7-fpm sh
@@ -7,7 +7,7 @@ docker tag php7-fpm robkel/php7-fpm
 docker push robkel/php7-fpm
 ```
 ###
-# steps to create
+# Steps to create Pods, Services, ConfigMaps
 ```sh
 kubectl create -f ./k8s/php7fpm-rc.yaml
 kubectl create -f ./k8s/php7fpm-svc.yaml
