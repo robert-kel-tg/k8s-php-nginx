@@ -22,6 +22,12 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - mountPath: "/etc/nginx/conf.d"
+        - mountPath: "/etc/nginx/nginx.conf"
           name: config
-          readOnly: true
+          subPath: nginx.conf
+          # mountPath - mount path where to put on the server
+        - mountPath: "/etc/nginx/conf.d/app.conf"
+          # name - name of a volume
+          name: config
+          # subPath - mount there without affecting other files on the server
+          subPath: app.conf
