@@ -30,6 +30,6 @@ minikube service my-nginx
 ```
 # ssh into nginx container
 ```sh
-kubectl exec -it my-nginx-5d69b5ff7-9tzhh -c my-nginx bash
-kubectl exec -it php7-fpm-d58gn -c phpfpm sh
+kubectl exec -it [pod name] -c my-nginx bash
+kubectl exec -it [pod name] -c phpfpm sh
 ```
